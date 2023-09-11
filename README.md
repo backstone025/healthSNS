@@ -12,4 +12,6 @@ Wep :
 
 Server :
 
+해당 계획서는 다음과 같습니다 ↓
+
 [health SNS.pdf](https://github.com/backstone025/healthSNS/files/12578690/health.SNS.pdf)
