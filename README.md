@@ -11,3 +11,5 @@ App :
 Wep :
 
 Server :
+
+[health SNS.pdf](https://github.com/backstone025/healthSNS/files/12578690/health.SNS.pdf)
