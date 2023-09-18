@@ -5,6 +5,22 @@
 
 body {
   color: #2e363e;
+  padding: 20px;
   font-family: 'Open Sans', sans-serif;
+
 }
+
+.free_chat {
+  position: relative;
+  top: 150px;
+  background-color: yellow;
+  height: 50vh;
+  width: 100%;
+}
+
+.text_input {
+  width: 100%;
+  bottom: 100px
+}
+
 
