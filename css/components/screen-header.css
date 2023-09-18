@@ -6,6 +6,7 @@
   align-items: center;
   margin-top: 20px;
   margin-bottom: 15px;
+  position: fixed;
 }
 
 .screen-header__title {
@@ -14,6 +15,6 @@
 }
 
 .screen-header__icons span {
-  margin-left: 25px;
   position: relative;
+  margin-left: 25px;
 }
