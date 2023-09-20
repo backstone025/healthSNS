@@ -6,25 +6,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 
-class alarmFragment: Fragment() {
+class AlarmFragment: Fragment() {
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
+        inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.alarm_fragment, container, false)
-
-        return view
-    }
-
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-
-
-    }
-
-    override fun onResume() {
-        super.onResume()
-
+        // 여기에 첫 번째 Fragment의 레이아웃을 inflate하고 초기화하는 코드를 작성합니다.
+        return inflater.inflate(R.layout.alarm_fragment, container, false)
     }
 }
