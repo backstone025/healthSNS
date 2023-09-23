@@ -3,47 +3,50 @@
 <!DOCTYPE html>
 <html lang="kr">
 <head>
-  <link rel="stylesheet" href="css/style.css" />
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ouroboros</title>
+  <title>헬스 커뮤니티 플랫폼</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
   <header class="screen-header">
-    <h1 class="screen-header__title">우로보로스</h1>
-    <div class="screen-header__icons">
-      <span><a class="nav__link" href="search.html">
-        <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-      </a>
-    </span>
-      <span><a class="nav__link" href="setting.html">
-        <i class="fa-solid fa-gear fa-lg"></i>
-      </a>
-    </span>
+    <h1 class="screen-header__title">헬스 커뮤니티</h1>    
   </header>
-
   <nav class="nav">
     <ul class="nav__list">
-      <li class="nav__btn">
+      <div class="nav__btn">
         <a class="nav__link" href="home.html">
           <i class="fa-solid fa-house fa-2x"></i>
         </a>
-      </li>
-      <li class="nav__btn">
-        <a class="nav__link" href="community.html">
-          <i class="fa-regular fa-comment fa-2x"></i>
-        </a>
-      </li>
-      <li class="nav__btn"><a class="nav__link" href="notice.html">
+      </div>
+      <div class="nav__btn"><a class="nav__link" href="community.html">
+        <i class="fa-regular fa-comment fa-2x"></i>
+      </a>
+    </div>
+    <div class="nav__btn">
+      <a class="nav__link" href="notice.html">
         <i class="fa-solid fa-bell fa-2x"></i>
       </a>
-    </li>
-      <li class="nav__btn"><a class="nav__link" href="user.html">
+    </div>
+    <div class="nav__btn">
+      <a class="nav__link" href="user.html">
         <i class="fa-solid fa-user fa-2x"></i>
       </a>
-    </li>
+    </div>
   </ul>
 </nav>
-  <script src="https://kit.fontawesome.com/5dc87f48ae.js" crossorigin="anonymous"></script>
+<main class="screen-header__search">
+  <section class="search">
+    <h2 class="search-bar">검색</h2>
+    <form action="/search" method="get">
+      <input type="text" name="query" placeholder="검색어를 입력하세요">
+      <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+    </form>
+  </section>
+</main>
+<footer>
+  <p>&copy; 우로보로스</p>
+</footer>
+<script src="https://kit.fontawesome.com/5dc87f48ae.js" crossorigin="anonymous"></script>
 </body>
 </html>
