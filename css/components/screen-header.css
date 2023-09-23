@@ -1,16 +1,16 @@
 /*  사이트 상단 바(사이트명 및 검색, 설정)  */
 
 .screen-header {
+  width: 100%;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
   margin-top: 20px;
   margin-bottom: 15px;
-  position: fixed;
+
 }
 
 .screen-header__title {
-  font-size: 32px;
+  font-size: 40px;
   font-weight: 600;
 }
 
