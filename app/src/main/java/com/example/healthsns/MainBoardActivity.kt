@@ -44,6 +44,7 @@ class MainBoardActivity : AppCompatActivity() {
         btn5.setOnClickListener {
             viewPager.currentItem = 2
         }
+
     }
 
 

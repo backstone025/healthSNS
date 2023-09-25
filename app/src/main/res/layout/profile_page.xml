@@ -5,82 +5,125 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/pfIv"
-        android:layout_width="175dp"
-        android:layout_height="160dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="69dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
-
     <TextView
-        android:id="@+id/iDtxt1"
-        android:layout_width="65dp"
-        android:layout_height="31dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginBottom="17dp"
-        android:text="김00"
-        app:layout_constraintBottom_toTopOf="@+id/iDbtn"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <TextView
-        android:id="@+id/pftxt12"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:autoText="true"
-        android:text="40"
-        app:layout_constraintBottom_toBottomOf="@+id/pftxt1_2"
-        app:layout_constraintEnd_toStartOf="@+id/pftxt1_2"
-        app:layout_constraintStart_toStartOf="@+id/pftodo"
-        app:layout_constraintTop_toBottomOf="@+id/pftxt1_2" />
-
-    <TextView
-        android:id="@+id/pftxt22"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:text="70"
-        app:layout_constraintBaseline_toBaselineOf="@+id/pftxt2_2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/pftxt3_1"
-        android:layout_width="28dp"
-        android:layout_height="14dp"
-        android:layout_marginStart="70dp"
-        android:layout_marginTop="135dp"
-        android:layout_marginEnd="69dp"
-        android:layout_marginBottom="135dp"
-        android:text="16kg"
-        app:layout_constraintBottom_toBottomOf="@+id/profileDtxt1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/pftxt2_2"
-        app:layout_constraintTop_toBottomOf="@+id/iDbtn" />
-
-    <TextView
-        android:id="@+id/profileDtxt1"
+        android:id="@+id/profile_page_tv1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="13dp"
-        android:text="2023.04.17"
-        app:layout_constraintBottom_toTopOf="@+id/pfscv"
+        android:text="Profile"
+        android:textSize="34sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/profile_page_picture"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="사진"
+        app:layout_constraintEnd_toStartOf="@+id/profile_page_nickname"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile_page_tv1" />
+
+    <TextView
+        android:id="@+id/profile_page_nickname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="닉네임"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/profile_page_btn1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/profile_page_picture" />
+
+    <Button
+        android:id="@+id/profile_page_setting1"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="10dp"
+        android:text="개인수정"
+        android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/profile_page_tv1" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile_page_picture">
+
+        <TextView
+            android:id="@+id/profile_page_tv2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="몸무게"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/profile_page_tv3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="총 근력량"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/profile_page_tv4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="체지방률"
+            android:textAlignment="center" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+        <Button
+            android:id="@+id/profile_page_btn2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Button" />
+
+        <Button
+            android:id="@+id/profile_page_btn3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Button" />
+
+        <Button
+            android:id="@+id/profile_page_btn4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Button" />
+    </LinearLayout>
 
     <ScrollView
-        android:id="@+id/pfscv"
+        android:id="@+id/scrollView2"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="7dp"
-        android:layout_marginTop="48dp"
-        android:layout_marginEnd="7dp"
-        android:layout_marginBottom="43dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/pfDBtn">
+        app:layout_constraintTop_toBottomOf="@+id/profile_page_switch1">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -88,93 +131,78 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/pfDTdo1"
+                android:id="@+id/profile_page_tv5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="X 레그컬 3세트" />
+                android:text="계획"
+                android:textAlignment="center"
+                android:textSize="24sp" />
 
-            <TextView
-                android:id="@+id/pfDTodo2"
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="V 숄더프레스 머신 3세트" />
+                android:layout_height="50dp">
+
+                <Button
+                    android:id="@+id/profile_page_btn5"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="5dp"
+                    android:text="Button"
+                    app:layout_constraintBottom_toBottomOf="@+id/profile_page_date"
+                    app:layout_constraintEnd_toStartOf="@+id/profile_page_date"
+                    app:layout_constraintTop_toTopOf="@+id/profile_page_date" />
+
+                <Button
+                    android:id="@+id/profile_page_btn6"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="5dp"
+                    android:text="Button"
+                    app:layout_constraintBottom_toBottomOf="@+id/profile_page_date"
+                    app:layout_constraintStart_toEndOf="@+id/profile_page_date"
+                    app:layout_constraintTop_toTopOf="@+id/profile_page_date" />
+
+                <TextView
+                    android:id="@+id/profile_page_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2023.09.25"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
         </LinearLayout>
     </ScrollView>
 
     <Button
-        android:id="@+id/iDbtn"
-        android:layout_width="76dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="86dp"
-        android:layout_marginEnd="48dp"
-        android:layout_marginBottom="87dp"
-        android:text="변경"
-        app:layout_constraintBottom_toBottomOf="@+id/textView24"
+        android:id="@+id/profile_page_btn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:text="팔로우"
+        app:layout_constraintBottom_toBottomOf="@+id/profile_page_nickname"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/pfIv" />
+        app:layout_constraintTop_toTopOf="@+id/profile_page_nickname" />
+
+    <Switch
+        android:id="@+id/profile_page_switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout3"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
 
     <Button
-        android:id="@+id/pfDBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="239dp"
-        android:text="수정하기"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/pfscv" />
-
-    <TextView
-        android:id="@+id/pftxt1_2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="77dp"
-        android:layout_marginTop="91dp"
-        android:layout_marginEnd="78dp"
-        android:text="kg"
-        app:layout_constraintEnd_toStartOf="@+id/profileDtxt1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pfIv" />
-
-    <TextView
-        android:id="@+id/pftxt2_2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="13dp"
-        android:layout_marginTop="44dp"
-        android:text="kg"
-        app:layout_constraintStart_toEndOf="@+id/pftxt22"
-        app:layout_constraintTop_toBottomOf="@+id/textView23" />
-
-    <TextView
-        android:id="@+id/textView23"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="4dp"
-        android:text="몸무게"
-        app:layout_constraintEnd_toStartOf="@+id/pftxt2_2"
-        app:layout_constraintTop_toBottomOf="@+id/pfIv" />
-
-    <TextView
-        android:id="@+id/textView24"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="54dp"
-        android:layout_marginEnd="54dp"
-        android:layout_marginBottom="41dp"
-        android:text="체지방량"
-        app:layout_constraintBottom_toTopOf="@+id/pftxt2_2"
-        app:layout_constraintEnd_toEndOf="@+id/pfDBtn"
-        app:layout_constraintStart_toEndOf="@+id/pftxt2_2" />
-
-    <TextView
-        android:id="@+id/pftodo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginBottom="32dp"
-        android:text="계획"
-        app:layout_constraintBottom_toTopOf="@+id/pfscv"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:id="@+id/profile_page_setting2"
+        android:layout_width="100dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="10dp"
+        android:text="수정"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/scrollView2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
