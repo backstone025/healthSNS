@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-
-<resources>
-
-    <style name="CustomDialog" parent="Theme.AppCompat.Light.Dialog">
-        <item name="android:layout_width">300dp</item>
-        <item name="android:layout_height">200dp</item>
-    </style>
-</resources>
