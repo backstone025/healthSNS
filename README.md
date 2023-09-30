@@ -14,4 +14,8 @@ Server :
 
 해당 계획서는 다음과 같습니다 ↓
 
+앱 ->
 [health SNS.pdf](https://github.com/backstone025/healthSNS/files/12682325/health.SNS.pdf)
+
+웹 ->
+[웹 계획서.pdf](https://github.com/backstone025/healthSNS/files/12774068/default.pdf)
