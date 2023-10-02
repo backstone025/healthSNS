@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/profile_personal_board"
+        android:layout_width="300dp"
+        android:layout_height="600dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/background_white" />
+
+    <Button
+        android:id="@+id/profile_personal_iv1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="20dp"
+        android:text="picture"
+        app:layout_constraintStart_toStartOf="@+id/profile_personal_board"
+        app:layout_constraintTop_toBottomOf="@+id/profile_personal_btn1" />
+
+    <EditText
+        android:id="@+id/profile_personal_etv1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        app:layout_constraintBottom_toBottomOf="@+id/profile_personal_iv1"
+        app:layout_constraintEnd_toEndOf="@+id/profile_personal_board"
+        app:layout_constraintStart_toEndOf="@+id/profile_personal_iv1"
+        app:layout_constraintTop_toTopOf="@+id/profile_personal_iv1" />
+
+    <EditText
+        android:id="@+id/profile_personal_etv2"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:gravity="center|start|top"
+        android:inputType="number"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/profile_personal_board"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/profile_personal_board"
+        app:layout_constraintTop_toBottomOf="@+id/profile_personal_tv1" />
+
+    <EditText
+        android:id="@+id/profile_personal_etv3"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:gravity="center|start|top"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/profile_personal_board"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/profile_personal_board"
+        app:layout_constraintTop_toBottomOf="@+id/profile_personal_tv2" />
+
+    <EditText
+        android:id="@+id/profile_personal_etv4"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:gravity="center|start|top"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/profile_personal_board"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/profile_personal_board"
+        app:layout_constraintTop_toBottomOf="@+id/profile_personal_tv3" />
+
+    <TextView
+        android:id="@+id/profile_personal_tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="몸무게"
+        app:layout_constraintEnd_toEndOf="@+id/profile_personal_board"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/profile_personal_board"
+        app:layout_constraintTop_toBottomOf="@+id/profile_personal_iv1" />
+
+    <TextView
+        android:id="@+id/profile_personal_tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="근육량"
+        app:layout_constraintEnd_toEndOf="@+id/profile_personal_board"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/profile_personal_board"
+        app:layout_constraintTop_toBottomOf="@+id/profile_personal_etv2" />
+
+    <TextView
+        android:id="@+id/profile_personal_tv3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="체지방"
+        app:layout_constraintEnd_toEndOf="@+id/profile_personal_board"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/profile_personal_board"
+        app:layout_constraintTop_toBottomOf="@+id/profile_personal_etv3" />
+
+    <TextView
+        android:id="@+id/profile_personal_tv4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="kg"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/profile_personal_etv2"
+        app:layout_constraintStart_toEndOf="@+id/profile_personal_etv2"
+        app:layout_constraintTop_toTopOf="@+id/profile_personal_etv2" />
+
+    <TextView
+        android:id="@+id/profile_personal_tv5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="kg"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/profile_personal_etv3"
+        app:layout_constraintStart_toEndOf="@+id/profile_personal_etv3"
+        app:layout_constraintTop_toTopOf="@+id/profile_personal_etv3" />
+
+    <TextView
+        android:id="@+id/profile_personal_tv6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="kg"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/profile_personal_etv4"
+        app:layout_constraintStart_toEndOf="@+id/profile_personal_etv4"
+        app:layout_constraintTop_toTopOf="@+id/profile_personal_etv4" />
+
+    <Button
+        android:id="@+id/profile_personal_btn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="비밀번호 재설정"
+        app:layout_constraintBottom_toBottomOf="@+id/profile_personal_board"
+        app:layout_constraintEnd_toEndOf="@+id/profile_personal_board"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/profile_personal_board"
+        app:layout_constraintTop_toBottomOf="@+id/profile_personal_etv4" />
+
+    <Button
+        android:id="@+id/profile_personal_btn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="완료"
+        app:layout_constraintEnd_toEndOf="@+id/profile_personal_board"
+        app:layout_constraintTop_toTopOf="@+id/profile_personal_board" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
