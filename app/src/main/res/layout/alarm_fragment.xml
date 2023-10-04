@@ -5,26 +5,51 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <ImageView
+        android:id="@+id/alarm_board"
+        android:layout_width="300dp"
+        android:layout_height="600dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/background_white" />
+
     <TextView
-        android:id="@+id/alar_fragmet_tv1"
+        android:id="@+id/alarm_tv1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="알림"
         android:textAlignment="center"
         android:textSize="34sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="@+id/alarm_board"
+        app:layout_constraintStart_toStartOf="@+id/alarm_board"
+        app:layout_constraintTop_toTopOf="@+id/alarm_board" />
 
-    <LinearLayout
-        android:id="@+id/alarm_fragment_board"
+    <ScrollView
         android:layout_width="0dp"
-        android:layout_height="650dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/alar_fragmet_tv1"
-        app:layout_constraintVertical_bias="1.0"></LinearLayout>
+        android:layout_height="0dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/alarm_btn1"
+        app:layout_constraintEnd_toEndOf="@+id/alarm_board"
+        app:layout_constraintStart_toStartOf="@+id/alarm_board"
+        app:layout_constraintTop_toBottomOf="@+id/alarm_tv1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+
+    <Button
+        android:id="@+id/alarm_btn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="완료"
+        app:layout_constraintBottom_toBottomOf="@+id/alarm_board"
+        app:layout_constraintEnd_toEndOf="@+id/alarm_board" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

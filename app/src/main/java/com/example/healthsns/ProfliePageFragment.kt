@@ -10,8 +10,17 @@ import android.widget.ImageView
 import android.widget.Switch
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.viewpager2.widget.ViewPager2
+import java.text.SimpleDateFormat
+import java.util.Calendar
+import java.util.Date
 
 class ProfliePageFragment:Fragment() {
+
+    private lateinit var calendar: Calendar
+    private var year: Int = 0
+    private var month: Int = 0
+    private var day: Int = 0
 
     private lateinit var btn1: Button
     private lateinit var btn2: Button
@@ -36,6 +45,9 @@ class ProfliePageFragment:Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.profile_page, container, false)
 
+        calendar = Calendar.getInstance()
+        calendar.time = Date()
+
         // -> 개인 정보 설정
         btn1 = view.findViewById(R.id.profile_page_setting1)
 
@@ -44,6 +56,7 @@ class ProfliePageFragment:Fragment() {
 
         // -> 팔로우
         btn3 = view.findViewById(R.id.profile_page_btn1)
+
 
         // -> 달력 넘김 버튼
         btn4 = view.findViewById(R.id.profile_page_btn2)
@@ -78,14 +91,33 @@ class ProfliePageFragment:Fragment() {
             dialog3.show(requireActivity().supportFragmentManager, "FollowFragment")
         }
 
-        btn4.setOnClickListener {
 
+
+        btn4.setOnClickListener {
+            calendar.add(Calendar.DATE, -1)
+            applyCalendar()
         }
 
         btn5.setOnClickListener {
-
+            calendar.add(Calendar.DATE, 1)
+            applyCalendar()
         }
+
+        applyCalendar()
 
         return view
     }
+
+    fun applyCalendar(){
+        val formatter1 = SimpleDateFormat("yyyy")
+        val formatter2 = SimpleDateFormat("MM")
+        val formatter3 = SimpleDateFormat("dd")
+
+        year = formatter1.format(calendar.time).toInt()
+        month = formatter2.format(calendar.time).toInt()
+        day = formatter3.format(calendar.time).toInt()
+
+        tv5.text = "$year.$month.$day"
+    }
+
 }

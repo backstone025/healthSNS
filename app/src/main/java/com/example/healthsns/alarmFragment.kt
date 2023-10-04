@@ -4,14 +4,26 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.Fragment
 
-class AlarmFragment: Fragment() {
+class AlarmFragment: DialogFragment() {
+
+    private lateinit var btn1:Button
+
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // 여기에 첫 번째 Fragment의 레이아웃을 inflate하고 초기화하는 코드를 작성합니다.
-        return inflater.inflate(R.layout.alarm_fragment, container, false)
+        val view = inflater.inflate(R.layout.alarm_fragment, container, false)
+
+        btn1 = view.findViewById(R.id.alarm_btn1)
+        btn1.setOnClickListener {
+            this.dismiss()
+        }
+
+        return view
     }
 }
