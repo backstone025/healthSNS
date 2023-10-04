@@ -10,8 +10,17 @@ import android.widget.ImageView
 import android.widget.Switch
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import java.text.SimpleDateFormat
+import java.util.Calendar
+import java.util.Date
+import kotlin.properties.Delegates
 
-class ProfliePageFragment:Fragment() {
+class ProfliePageFragment : Fragment() {
+
+    private lateinit var calendar: Calendar
+    private var year: Int = 0
+    private var month: Int = 0
+    private var date: Int = 0
 
     private lateinit var btn1: Button
     private lateinit var btn2: Button
@@ -35,6 +44,17 @@ class ProfliePageFragment:Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.profile_page, container, false)
+
+        calendar = Calendar.getInstance()
+        calendar.time = Date()
+
+        val formatter1 = SimpleDateFormat("yyyy")
+        val formatter2 = SimpleDateFormat("MM")
+        val formatter3 = SimpleDateFormat("dd")
+
+        year = formatter1.format(calendar.time).toInt()
+        month = formatter2.format(calendar.time).toInt()
+        date = formatter3.format(calendar.time).toInt()
 
         // -> 개인 정보 설정
         btn1 = view.findViewById(R.id.profile_page_setting1)
@@ -79,12 +99,22 @@ class ProfliePageFragment:Fragment() {
         }
 
         btn4.setOnClickListener {
-
+            calendar.add(Calendar.DATE, -1)
+            year = formatter1.format(calendar.time).toInt()
+            month = formatter2.format(calendar.time).toInt()
+            date = formatter3.format(calendar.time).toInt()
+            tv5.text = "$year.$month.$date"
         }
 
         btn5.setOnClickListener {
-
+            calendar.add(Calendar.DATE, 1)
+            year = formatter1.format(calendar.time).toInt()
+            month = formatter2.format(calendar.time).toInt()
+            date = formatter3.format(calendar.time).toInt()
+            tv5.text = "$year.$month.$date"
         }
+
+        tv5.text = "$year.$month.$date"
 
         return view
     }
