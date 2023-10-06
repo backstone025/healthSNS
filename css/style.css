@@ -14,17 +14,37 @@ body {
 
 }
 
+.nav {
+  background: #d1bcff;
+}
+
 .free_chat {
   position: relative;
   top: 150px;
-  background-color: yellow;
+  background-color: #d1bcff;
   height: 50vh;
   width: 100%;
 }
 
 .text_input {
   width: 100%;
-  bottom: 100px
+  bottom: 100px;
+}
+
+#live-chat {
+  position: fixed;
+  bottom: 100px;
+  right: 100px;
+  z-index: 1;
+
+  border: none;
+  border-radius: 15px;
+  background: #d1bcff;
+  color: #000000;
+  padding: 12px;
+  font-weight: bold;
+  box-shadow: 0px 5px 10px #808080;
+  cursor: pointer;
 }
 
 
